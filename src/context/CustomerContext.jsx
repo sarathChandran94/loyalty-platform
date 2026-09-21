@@ -14,7 +14,7 @@ export const CustomerProvider = ({children}) => {
         async function fetchCustomer () {
             try{
                 const response = await api.get('customers/6aae6728453885d368af4ff9') 
-                console.log(response.data);
+                // console.log(response.data);
                 
                 setCustomer(response.data)
             } catch (error) {

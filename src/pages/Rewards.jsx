@@ -10,12 +10,11 @@ export const Rewards = () => {
         </div>
 
         <div className='mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 mb-4'>
-            {rewards.map(() => (
+            {/* {rewards.map((reward) => ( */}
                 <RewardCard
-                    key={rewards.id}
                     rewards={rewards}
                 />
-            ))}
+            {/* ))} */}
         </div>
         
         </>

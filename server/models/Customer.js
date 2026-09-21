@@ -15,6 +15,11 @@ const customerSchema = new mongoose.Schema(
             lowercase: true,
             trim: true,
         },
+        password: {
+            type: String,
+            required: true,
+            minlenth: 6
+        },
         points: {
             type: Number,
             default: 0,

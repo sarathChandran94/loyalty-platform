@@ -14,7 +14,7 @@ const TransactionList = ({transactions}) => {
                 {transactions.map( (transaction) => (
                   <>
                   <div
-                    key = {transaction.id}
+                    key={transaction.id}
                     className='flex items-center justify-between py-4'>
                   </div>
                   <div>
