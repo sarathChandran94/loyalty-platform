@@ -7,7 +7,17 @@ import {transactions, rewards} from '../data/DummyData'
 import { useCustomer } from '../context/UseCustomer'
 
 export const Dashboard = () => {
-const {customer, setCustomer} = useCustomer()
+const {customer, setCustomer, loading, error} = useCustomer()
+
+if (loading) {
+    return <div className='p-6'>Loading customer...</div>
+}
+if (error) {
+    return <div className='p-6 text-red-600'>{error}</div>
+}
+if (!customer) {
+    return <div className='p-6'>Customer not found...</div>
+}
 // const [points, setPoints] = useState(5000)
 const handleRedeem = (reward) => {
     // console.log(`point bef setPoints: ${points}`);
