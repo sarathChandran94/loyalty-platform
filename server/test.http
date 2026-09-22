@@ -1,0 +1,25 @@
+###REGISTER
+
+POST http://localhost:5055/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "Test User",
+    "email": "testemail@email.com",
+    "password": "TestPassword123"
+}
+
+### LOGIN
+
+POST http://localhost:5055/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "testemail@email.com",
+    "password": "TestPassword123"
+}
+
+### Get Current User
+GET http://localhost:5055/api/customers/me
+Authorization: Bearer YOUR_JWT_TOKEN
+
